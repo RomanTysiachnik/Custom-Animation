@@ -4,11 +4,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var mainView: UIView!
+    
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var bottomView: UIView!
-    
     @IBOutlet weak var shadowView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         bottomView.isHidden = model.isHidden
     }
     
-    @IBAction func tapAction(_ sender: UIButton) {
+    @IBAction func viewTapAction(_ sender: UITapGestureRecognizer) {
         UIView.animateKeyframes(withDuration: 0.6, delay: 0, options: UIViewKeyframeAnimationOptions.beginFromCurrentState, animations: {
             if self.model.isHidden {
                 self.model.changeHiddenStatus()

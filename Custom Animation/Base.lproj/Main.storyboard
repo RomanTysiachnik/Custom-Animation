@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,57 +15,87 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Custom_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyP-Q5-u0n" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.094741366135179583" blue="0.064233332759787931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-9Z-Vg1" userLabel="Side View">
-                                <rect key="frame" x="363" y="111" width="51" height="464"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.094883921122068005" green="0.22866891276307211" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-s3-kJU" userLabel="Center View">
-                                <rect key="frame" x="101" y="287" width="213" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.33090508023187282" blue="0.67288803604907621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="TAY-Qn-x7u">
+                                <rect key="frame" x="323" y="111" width="52" height="465"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-9Z-Vg1" userLabel="Side View">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="465"/>
+                                        <color key="backgroundColor" red="0.094883921122068005" green="0.22866891276307211" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9eO-9Z-Vg1" firstAttribute="leading" secondItem="TAY-Qn-x7u" secondAttribute="leading" id="mjs-Wt-GEa"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="pkf-r7-FAV">
+                                <rect key="frame" x="92" y="277" width="192" height="178"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-s3-kJU" userLabel="Center View">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="133.5"/>
+                                        <color key="backgroundColor" red="1" green="0.33090508023187282" blue="0.67288803604907621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="5Xw-ET-ZuN">
+                                        <rect key="frame" x="0.0" y="139.5" width="192" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sEc-s3-kJU" firstAttribute="trailing" secondItem="5Xw-ET-ZuN" secondAttribute="trailing" id="J6c-2K-itT"/>
+                                    <constraint firstItem="sEc-s3-kJU" firstAttribute="leading" secondItem="pkf-r7-FAV" secondAttribute="leading" id="X17-IH-fSY"/>
+                                </constraints>
+                            </stackView>
+                            <view alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9X-tf-JvQ">
-                                <rect key="frame" x="184" y="519" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.63457241489170801" green="0.84397296349506257" blue="0.91185637953367871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Tap">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZr-Iy-dqv"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyP-Q5-u0n" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.094741366135179583" blue="0.064233332759787931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F3q-ik-YB8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAh-5V-jqP" secondAttribute="trailing" id="Aor-uf-MYz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jAh-5V-jqP" secondAttribute="bottom" id="JqT-C0-fYm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="jAh-5V-jqP" secondAttribute="top" constant="20" id="S7u-ve-4sz"/>
-                            <constraint firstItem="jAh-5V-jqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="spS-pC-WkX"/>
+                            <constraint firstItem="pkf-r7-FAV" firstAttribute="centerX" secondItem="zyP-Q5-u0n" secondAttribute="centerX" id="0eH-jx-9bK"/>
+                            <constraint firstItem="TAY-Qn-x7u" firstAttribute="leading" secondItem="pkf-r7-FAV" secondAttribute="trailing" constant="39" id="EEV-Kl-MCl"/>
+                            <constraint firstItem="TAY-Qn-x7u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="HwU-gN-nu7"/>
+                            <constraint firstItem="zyP-Q5-u0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LvA-nt-dqk"/>
+                            <constraint firstItem="zyP-Q5-u0n" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="POR-mF-ERG"/>
+                            <constraint firstItem="TAY-Qn-x7u" firstAttribute="trailing" secondItem="zyP-Q5-u0n" secondAttribute="trailing" id="dQR-oO-stz"/>
+                            <constraint firstAttribute="bottom" secondItem="pkf-r7-FAV" secondAttribute="bottom" constant="212" id="hMN-O7-6Pk"/>
+                            <constraint firstItem="pkf-r7-FAV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="257" id="pKh-4I-zdL"/>
+                            <constraint firstItem="pkf-r7-FAV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="x7j-BJ-zOT"/>
+                            <constraint firstItem="zyP-Q5-u0n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ys5-AW-Svf"/>
+                            <constraint firstItem="zyP-Q5-u0n" firstAttribute="top" secondItem="TAY-Qn-x7u" secondAttribute="bottom" constant="41" id="zU1-ti-od6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gl5-eS-5zY" appends="YES" id="8Ve-VV-pvM"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="zyP-Q5-u0n" id="rOP-bp-wPK"/>
                         <outlet property="centerView" destination="sEc-s3-kJU" id="elD-ER-oW7"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="zDb-Ie-uS6"/>
                         <outlet property="shadowView" destination="jAh-5V-jqP" id="Tb4-A8-hqj"/>
                         <outlet property="sideView" destination="9eO-9Z-Vg1" id="a7w-8I-iI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gl5-eS-5zY">
+                    <connections>
+                        <action selector="viewTapAction:" destination="BYZ-38-t0r" id="4bc-in-ekE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.39130434782609" y="118.20652173913044"/>
         </scene>
