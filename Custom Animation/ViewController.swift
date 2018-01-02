@@ -8,6 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var bottomView: UIView!
     
+    @IBOutlet weak var shadowView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,8 +23,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapAction(_ sender: UIButton) {
-        model.changeUIState()
-        view.setNeedsLayout()
+        UIView.animateKeyframes(withDuration: 0.6, delay: 0, options: UIViewKeyframeAnimationOptions.beginFromCurrentState, animations: {
+            if self.model.isHidden {
+                self.model.changeHiddenStatus()
+                self.bottomView.frame.origin.y -= self.bottomView.frame.height
+                self.sideView.frame.origin.x -= self.sideView.frame.width
+                self.centerView.alpha = 1
+                self.shadowView.alpha = 0.15
+            } else {
+                self.model.changeHiddenStatus()
+                self.bottomView.frame.origin.y += self.bottomView.frame.height
+                self.sideView.frame.origin.x += self.sideView.frame.width
+                self.centerView.alpha = 0
+                self.shadowView.alpha = 0
+            }
+        }, completion: nil)
     }
 }
 

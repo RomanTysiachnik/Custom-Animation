@@ -5,7 +5,7 @@ import UIKit
 struct ModelView {
     private(set) public var isHidden: Bool = false
     
-    mutating func changeUIState() {
+    mutating func changeHiddenStatus() {
         isHidden = isHidden ? false : true
     }
 }
