@@ -1,25 +1,29 @@
-//
-//  ViewController.swift
-//  Custom Animation
-//
-//  Created by rtysiachnik on 1/2/18.
 //  Copyright © 2018 rtysiachnik. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var centerView: UIView!
+    @IBOutlet weak var sideView: UIView!
+    @IBOutlet weak var bottomView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    var model = ModelView()
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        centerView.isHidden = model.isHidden
+        sideView.isHidden = model.isHidden
+        bottomView.isHidden = model.isHidden
     }
-
-
+    
+    @IBAction func tapAction(_ sender: UIButton) {
+        model.changeUIState()
+        view.setNeedsLayout()
+    }
 }
 
