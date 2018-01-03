@@ -64,9 +64,8 @@
                                     <action selector="buttonTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSN-OE-hVP"/>
                                 </connections>
                             </button>
-                            <view userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
-                                <rect key="frame" x="-20" y="-35" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -74,23 +73,33 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="centerX" secondItem="zyP-Q5-u0n" secondAttribute="centerX" id="0eH-jx-9bK"/>
+                            <constraint firstItem="jAh-5V-jqP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4AN-8P-6fd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TAY-Qn-x7u" secondAttribute="bottom" constant="91" id="8P8-zH-p7F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAY-Qn-x7u" secondAttribute="trailing" id="Agf-1f-krI"/>
                             <constraint firstItem="TAY-Qn-x7u" firstAttribute="leading" secondItem="pkf-r7-FAV" secondAttribute="trailing" constant="39" id="EEV-Kl-MCl"/>
                             <constraint firstItem="TAY-Qn-x7u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="HwU-gN-nu7"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LvA-nt-dqk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zyP-Q5-u0n" secondAttribute="bottom" id="Voh-hb-D6O"/>
+                            <constraint firstAttribute="trailing" secondItem="TAY-Qn-x7u" secondAttribute="leading" id="W7A-Kb-z0Y"/>
                             <constraint firstItem="lPU-1K-Xph" firstAttribute="top" secondItem="9eO-9Z-Vg1" secondAttribute="top" id="YjF-Hz-Eeo"/>
                             <constraint firstItem="lPU-1K-Xph" firstAttribute="centerX" secondItem="sEc-s3-kJU" secondAttribute="centerX" id="cdJ-7z-znt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zyP-Q5-u0n" secondAttribute="bottom" id="ceJ-gz-9e9"/>
-                            <constraint firstItem="TAY-Qn-x7u" firstAttribute="trailing" secondItem="zyP-Q5-u0n" secondAttribute="trailing" id="dQR-oO-stz"/>
+                            <constraint firstAttribute="bottom" secondItem="zyP-Q5-u0n" secondAttribute="top" id="ceJ-gz-9e9"/>
+                            <constraint firstAttribute="trailing" secondItem="jAh-5V-jqP" secondAttribute="trailing" id="fYq-Z4-Ybi"/>
                             <constraint firstAttribute="bottom" secondItem="pkf-r7-FAV" secondAttribute="bottom" constant="212" id="hMN-O7-6Pk"/>
+                            <constraint firstAttribute="bottom" secondItem="jAh-5V-jqP" secondAttribute="bottom" id="iYp-3Y-jSf"/>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="257" id="pKh-4I-zdL"/>
+                            <constraint firstItem="jAh-5V-jqP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ukd-we-5QQ"/>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="x7j-BJ-zOT"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ys5-AW-Svf"/>
-                            <constraint firstItem="zyP-Q5-u0n" firstAttribute="top" secondItem="TAY-Qn-x7u" secondAttribute="bottom" constant="41" id="zU1-ti-od6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="lPU-1K-Xph"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="W7A-Kb-z0Y"/>
+                                <exclude reference="ceJ-gz-9e9"/>
                             </mask>
                         </variation>
                         <connections>
@@ -99,10 +108,14 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="zyP-Q5-u0n" id="rOP-bp-wPK"/>
+                        <outlet property="bottomViewAnimationConstraint" destination="ceJ-gz-9e9" id="RHb-8b-Edi"/>
+                        <outlet property="bottomViewDefaultConstraint" destination="Voh-hb-D6O" id="YzL-dp-qEe"/>
                         <outlet property="centerView" destination="sEc-s3-kJU" id="elD-ER-oW7"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="zDb-Ie-uS6"/>
                         <outlet property="shadowView" destination="jAh-5V-jqP" id="Tb4-A8-hqj"/>
                         <outlet property="sideView" destination="9eO-9Z-Vg1" id="a7w-8I-iI1"/>
+                        <outlet property="sideViewAnimationConstraint" destination="W7A-Kb-z0Y" id="4Yp-b0-9Kf"/>
+                        <outlet property="sideViewDefaultConstraint" destination="Agf-1f-krI" id="OnH-m9-xBL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
