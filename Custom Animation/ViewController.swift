@@ -17,29 +17,31 @@ class ViewController: UIViewController {
     
     var model = ModelView()
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        centerView.isHidden = model.isHidden
-        sideView.isHidden = model.isHidden
-        bottomView.isHidden = model.isHidden
+    //Animation using CABasicAnimation
+    @IBAction func buttonTapAction(_ sender: UIButton) {
     }
     
+    //Animation using UIView animate
     @IBAction func viewTapAction(_ sender: UITapGestureRecognizer) {
-        UIView.animateKeyframes(withDuration: 0.6, delay: 0, options: UIViewKeyframeAnimationOptions.beginFromCurrentState, animations: {
-            if self.model.isHidden {
-                self.model.changeHiddenStatus()
-                self.bottomView.frame.origin.y -= self.bottomView.frame.height
-                self.sideView.frame.origin.x -= self.sideView.frame.width
-                self.centerView.alpha = 1
-                self.shadowView.alpha = 0.15
-            } else {
-                self.model.changeHiddenStatus()
-                self.bottomView.frame.origin.y += self.bottomView.frame.height
-                self.sideView.frame.origin.x += self.sideView.frame.width
-                self.centerView.alpha = 0
-                self.shadowView.alpha = 0
-            }
-        }, completion: nil)
+        if self.model.isHidden {
+            UIView.animate(withDuration: 0.4, delay: 0, options: [.beginFromCurrentState, .curveEaseOut],
+                animations: {
+                    self.bottomView.frame.origin.y -= self.bottomView.frame.height
+                    self.shadowView.alpha = 0.15
+                    self.sideView.frame.origin.x -= self.sideView.frame.width
+                    self.centerView.alpha = 1 },
+                completion: nil)
+            self.model.changeHiddenStatus()
+        } else {
+            UIView.animate(withDuration: 0.4, delay: 0, options: [.beginFromCurrentState, .curveEaseOut],
+                animations: {
+                    self.bottomView.frame.origin.y += self.bottomView.frame.height
+                    self.shadowView.alpha = 0
+                    self.sideView.frame.origin.x += self.sideView.frame.width
+                    self.centerView.alpha = 0 },
+                completion: nil)
+            self.model.changeHiddenStatus()
+        }
     }
 }
 

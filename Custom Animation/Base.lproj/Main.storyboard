@@ -49,17 +49,25 @@
                                     <constraint firstItem="sEc-s3-kJU" firstAttribute="leading" secondItem="pkf-r7-FAV" secondAttribute="leading" id="X17-IH-fSY"/>
                                 </constraints>
                             </stackView>
-                            <view alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyP-Q5-u0n" userLabel="Bottom View">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.094741366135179583" blue="0.064233332759787931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="F3q-ik-YB8"/>
                                 </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPU-1K-Xph">
+                                <rect key="frame" x="171.5" y="111" width="33" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Tap"/>
+                                <connections>
+                                    <action selector="buttonTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSN-OE-hVP"/>
+                                </connections>
+                            </button>
+                            <view userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
+                                <rect key="frame" x="-20" y="-35" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,7 +77,9 @@
                             <constraint firstItem="TAY-Qn-x7u" firstAttribute="leading" secondItem="pkf-r7-FAV" secondAttribute="trailing" constant="39" id="EEV-Kl-MCl"/>
                             <constraint firstItem="TAY-Qn-x7u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="HwU-gN-nu7"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LvA-nt-dqk"/>
-                            <constraint firstItem="zyP-Q5-u0n" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="POR-mF-ERG"/>
+                            <constraint firstItem="lPU-1K-Xph" firstAttribute="top" secondItem="9eO-9Z-Vg1" secondAttribute="top" id="YjF-Hz-Eeo"/>
+                            <constraint firstItem="lPU-1K-Xph" firstAttribute="centerX" secondItem="sEc-s3-kJU" secondAttribute="centerX" id="cdJ-7z-znt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zyP-Q5-u0n" secondAttribute="bottom" id="ceJ-gz-9e9"/>
                             <constraint firstItem="TAY-Qn-x7u" firstAttribute="trailing" secondItem="zyP-Q5-u0n" secondAttribute="trailing" id="dQR-oO-stz"/>
                             <constraint firstAttribute="bottom" secondItem="pkf-r7-FAV" secondAttribute="bottom" constant="212" id="hMN-O7-6Pk"/>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="257" id="pKh-4I-zdL"/>
@@ -78,6 +88,11 @@
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="top" secondItem="TAY-Qn-x7u" secondAttribute="bottom" constant="41" id="zU1-ti-od6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lPU-1K-Xph"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Gl5-eS-5zY" appends="YES" id="8Ve-VV-pvM"/>
                         </connections>
