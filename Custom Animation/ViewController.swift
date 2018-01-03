@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         if self.model.isHidden {
             UIView.animate(withDuration: 0.4, delay: 0, options: [.beginFromCurrentState, .curveEaseOut],
                 animations: {
+                    self.statusBarHiddenState = false
                     self.bottomViewDefaultConstraint.isActive = true
                     self.bottomViewAnimationConstraint.isActive = false
                     self.sideViewDefaultConstraint.isActive = true
@@ -39,12 +40,14 @@ class ViewController: UIViewController {
                     self.shadowView.alpha = 0.15
                     self.centerView.alpha = 1
                     self.view.layoutIfNeeded()
+                    self.setNeedsStatusBarAppearanceUpdate()
             },
                 completion: nil)
             self.model.changeHiddenStatus()
         } else {
             UIView.animate(withDuration: 0.4, delay: 0, options: [.beginFromCurrentState, .curveEaseOut],
                 animations: {
+                    self.statusBarHiddenState = true
                     self.bottomViewDefaultConstraint.isActive = false
                     self.bottomViewAnimationConstraint.isActive = true
                     self.sideViewDefaultConstraint.isActive = false
@@ -52,11 +55,17 @@ class ViewController: UIViewController {
                     self.shadowView.alpha = 0
                     self.centerView.alpha = 0
                     self.view.layoutIfNeeded()
+                    self.setNeedsStatusBarAppearanceUpdate()
                     
             },
                 completion: nil)
             self.model.changeHiddenStatus()
         }
+    }
+    
+    private var statusBarHiddenState: Bool = false
+    override var prefersStatusBarHidden: Bool {
+        return statusBarHiddenState
     }
 }
 
