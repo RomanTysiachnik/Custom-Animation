@@ -22,11 +22,11 @@
                                 <rect key="frame" x="92" y="277" width="192" height="178"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-s3-kJU" userLabel="Center View">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="172"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="133.5"/>
                                         <color key="backgroundColor" red="1" green="0.33090508023187282" blue="0.67288803604907621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="5Xw-ET-ZuN">
-                                        <rect key="frame" x="0.0" y="178" width="192" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="139.5" width="192" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN5-yH-40r">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN5-yH-40r" userLabel="Top View">
                                 <rect key="frame" x="20" y="20" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.028910553428737711" green="0.91942733529999998" blue="0.39919067313560169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -69,12 +69,29 @@
                                     <constraint firstAttribute="width" constant="52" id="lDt-8p-2Lr"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cm6-hz-9ZU">
+                                <rect key="frame" x="70" y="20" width="234" height="29"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="PVh-25-nIY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="propsSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="C6V-8L-7aa"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="centerX" secondItem="zyP-Q5-u0n" secondAttribute="centerX" id="0eH-jx-9bK"/>
                             <constraint firstItem="jAh-5V-jqP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4AN-8P-6fd"/>
+                            <constraint firstItem="Cm6-hz-9ZU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Aq1-E2-UjY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9eO-9Z-Vg1" secondAttribute="trailing" id="DBR-mu-e1I"/>
                             <constraint firstItem="9eO-9Z-Vg1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="Iae-ej-G5F"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LvA-nt-dqk"/>
@@ -88,6 +105,8 @@
                             <constraint firstAttribute="bottom" secondItem="pkf-r7-FAV" secondAttribute="bottom" constant="212" id="hMN-O7-6Pk"/>
                             <constraint firstItem="vOB-VG-NuW" firstAttribute="top" secondItem="pkf-r7-FAV" secondAttribute="bottom" constant="52" id="hne-Gl-yIZ"/>
                             <constraint firstAttribute="bottom" secondItem="jAh-5V-jqP" secondAttribute="bottom" id="iYp-3Y-jSf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Cm6-hz-9ZU" secondAttribute="top" id="iph-e2-t9q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cm6-hz-9ZU" secondAttribute="trailing" constant="71" id="lF3-FM-mu0"/>
                             <constraint firstItem="vN5-yH-40r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lbj-Cq-dr8"/>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="277" id="pKh-4I-zdL"/>
                             <constraint firstAttribute="trailing" secondItem="9eO-9Z-Vg1" secondAttribute="leading" id="rW3-mw-KSZ"/>
@@ -98,16 +117,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="jAh-5V-jqP"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="rW3-mw-KSZ"/>
                                 <exclude reference="ceJ-gz-9e9"/>
                             </mask>
                         </variation>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Gl5-eS-5zY" appends="YES" id="8Ve-VV-pvM"/>
+                            <outletCollection property="gestureRecognizers" destination="Xix-px-eN3" appends="YES" id="GBu-vH-8yI"/>
                         </connections>
                     </view>
                     <connections>
@@ -117,6 +133,7 @@
                         <outlet property="centerView" destination="sEc-s3-kJU" id="elD-ER-oW7"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="zDb-Ie-uS6"/>
                         <outlet property="rightAnimator" destination="apO-pB-TG5" id="5dm-iQ-OmD"/>
+                        <outlet property="shadowAnimator" destination="ej9-rc-dm9" id="nUg-x3-nXo"/>
                         <outlet property="shadowView" destination="jAh-5V-jqP" id="Tb4-A8-hqj"/>
                         <outlet property="sideView" destination="9eO-9Z-Vg1" id="h26-3w-BLy"/>
                         <outlet property="topAnimator" destination="LN9-No-cQP" id="Nud-39-ObC"/>
@@ -138,21 +155,26 @@
                 </customObject>
                 <customObject id="3IT-HV-dks" customClass="AlphaAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
                     <connections>
-                        <outletCollection property="fadingVeiws" destination="sEc-s3-kJU" collectionClass="NSMutableArray" id="Tq5-30-NBC"/>
+                        <outlet property="fadingVeiw" destination="sEc-s3-kJU" id="9T2-QX-JM3"/>
                     </connections>
                 </customObject>
                 <customObject id="LN9-No-cQP" customClass="AlphaAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
                     <connections>
-                        <outletCollection property="fadingVeiws" destination="vN5-yH-40r" collectionClass="NSMutableArray" id="LkU-VV-WAv"/>
+                        <outlet property="fadingVeiw" destination="vN5-yH-40r" id="gHS-sT-7zP"/>
                     </connections>
                 </customObject>
-                <tapGestureRecognizer id="Gl5-eS-5zY">
+                <customObject id="ej9-rc-dm9" customClass="AlphaAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
                     <connections>
-                        <action selector="viewTapAction:" destination="BYZ-38-t0r" id="4bc-in-ekE"/>
+                        <outlet property="fadingVeiw" destination="jAh-5V-jqP" id="l4D-Zo-QbQ"/>
+                    </connections>
+                </customObject>
+                <tapGestureRecognizer id="Xix-px-eN3">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="49l-1h-flr"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="115.94202898550725" y="117.39130434782609"/>
+            <point key="canvasLocation" x="114.40000000000001" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

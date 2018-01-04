@@ -3,7 +3,7 @@
 import UIKit
 
 struct ModelView {
-    private(set) public var isHidden: Bool = false
+    public var isHidden: Bool = false
     
     mutating func changeHiddenStatus() {
         isHidden = !isHidden

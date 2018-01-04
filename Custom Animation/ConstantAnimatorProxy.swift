@@ -7,13 +7,8 @@ class ConstraintAnimatorProxy: NSObject {
     @IBOutlet var activeConstraint: NSLayoutConstraint!
     @IBOutlet var inactiveConstraint: NSLayoutConstraint!
     
-    func activate() {
-        activeConstraint.isActive = true
-        inactiveConstraint.isActive = false
-    }
-    
-    func deactivate() {
-        activeConstraint.isActive = false
-        inactiveConstraint.isActive = true
+    func activate(if expression: Bool) {
+        inactiveConstraint.isActive = expression
+        activeConstraint.isActive = !expression
     }
 }

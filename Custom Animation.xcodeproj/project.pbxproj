@@ -16,6 +16,7 @@
 		0672C6BF1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6BE1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift */; };
 		0672C6C11FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6C01FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift */; };
 		0672C6C41FFE4DBA001E6CC3 /* AnimatorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6C31FFE4DBA001E6CC3 /* AnimatorGroup.swift */; };
+		0672C6C61FFE51D4001E6CC3 /* UIProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6C51FFE51D4001E6CC3 /* UIProps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0672C6BE1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantAnimatorProxy.swift; sourceTree = "<group>"; };
 		0672C6C01FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaAnimatorProxy.swift; sourceTree = "<group>"; };
 		0672C6C31FFE4DBA001E6CC3 /* AnimatorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorGroup.swift; sourceTree = "<group>"; };
+		0672C6C51FFE51D4001E6CC3 /* UIProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				067040AF1FFBD9C200AE0A15 /* Model.swift */,
+				0672C6C51FFE51D4001E6CC3 /* UIProps.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				067040B01FFBD9C200AE0A15 /* Model.swift in Sources */,
 				0672C6BF1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift in Sources */,
+				0672C6C61FFE51D4001E6CC3 /* UIProps.swift in Sources */,
 				067040A01FFBD5BD00AE0A15 /* ViewController.swift in Sources */,
 				0670409E1FFBD5BD00AE0A15 /* AppDelegate.swift in Sources */,
 				0672C6C41FFE4DBA001E6CC3 /* AnimatorGroup.swift in Sources */,

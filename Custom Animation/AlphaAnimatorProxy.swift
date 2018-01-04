@@ -4,17 +4,9 @@ import UIKit
 
 class AlphaAnimatorProxy: NSObject {
     
-    @IBOutlet var fadingVeiws: [UIView]!
+    @IBOutlet var fadingVeiw: UIView!
     
-    func activate() {
-        for view in fadingVeiws {
-            view.alpha = 1
-        }
-    }
-    
-    func deactivate() {
-        for view in fadingVeiws {
-            view.alpha = 0
-        }
+    func activate(if expression: Bool) {
+        fadingVeiw.alpha = expression ? 0 : 1
     }
 }
