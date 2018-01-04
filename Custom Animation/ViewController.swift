@@ -10,6 +10,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var topView: UIView!
+    
+    
     @IBOutlet weak var bottomViewAnimationConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomViewDefaultConstraint: NSLayoutConstraint!
     @IBOutlet weak var sideViewAnimationConstraint: NSLayoutConstraint!
@@ -39,6 +42,7 @@ class ViewController: UIViewController {
                     self.sideViewAnimationConstraint.isActive = false
                     self.shadowView.alpha = 0.15
                     self.centerView.alpha = 1
+                    self.topView.alpha = 1
                     self.view.layoutIfNeeded()
                     self.setNeedsStatusBarAppearanceUpdate()
             },
@@ -54,6 +58,7 @@ class ViewController: UIViewController {
                     self.sideViewAnimationConstraint.isActive = true
                     self.shadowView.alpha = 0
                     self.centerView.alpha = 0
+                    self.topView.alpha = 0
                     self.view.layoutIfNeeded()
                     self.setNeedsStatusBarAppearanceUpdate()
                     
@@ -66,6 +71,9 @@ class ViewController: UIViewController {
     private var statusBarHiddenState: Bool = false
     override var prefersStatusBarHidden: Bool {
         return statusBarHiddenState
+    }
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation{
+        return .slide
     }
 }
 
