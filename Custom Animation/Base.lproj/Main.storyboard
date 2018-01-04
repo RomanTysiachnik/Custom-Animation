@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,30 +15,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Custom_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="TAY-Qn-x7u">
-                                <rect key="frame" x="362" y="111" width="52" height="484"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-9Z-Vg1" userLabel="Side View">
-                                        <rect key="frame" x="0.0" y="0.0" width="52" height="484"/>
-                                        <color key="backgroundColor" red="0.094883921122068005" green="0.22866891276307211" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="9eO-9Z-Vg1" firstAttribute="leading" secondItem="TAY-Qn-x7u" secondAttribute="leading" id="mjs-Wt-GEa"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="pkf-r7-FAV">
-                                <rect key="frame" x="92" y="277" width="231" height="247"/>
+                                <rect key="frame" x="92" y="277" width="192" height="178"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-s3-kJU" userLabel="Center View">
-                                        <rect key="frame" x="0.0" y="0.0" width="231" height="202.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="172"/>
                                         <color key="backgroundColor" red="1" green="0.33090508023187282" blue="0.67288803604907621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="5Xw-ET-ZuN">
-                                        <rect key="frame" x="0.0" y="208.66666666666669" width="231" height="38.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="178" width="192" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,14 +38,14 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyP-Q5-u0n" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="631" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="562" width="375" height="105"/>
                                 <color key="backgroundColor" red="1" green="0.094741366135179583" blue="0.064233332759787931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="F3q-ik-YB8"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a subtitle label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="vOB-VG-NuW">
-                                <rect key="frame" x="70" y="576" width="273" height="30"/>
+                                <rect key="frame" x="70" y="507" width="234" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,17 +58,16 @@
                                     <constraint firstAttribute="height" constant="30" id="W4I-JT-opF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPU-1K-Xph">
-                                <rect key="frame" x="171.5" y="111" width="33" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Tap"/>
-                                <connections>
-                                    <action selector="buttonTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSN-OE-hVP"/>
-                                </connections>
-                            </button>
                             <view userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-5V-jqP" userLabel="Shadow View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-9Z-Vg1" userLabel="Side View">
+                                <rect key="frame" x="323" y="73" width="52" height="415"/>
+                                <color key="backgroundColor" red="0.094883921122068005" green="0.22866891276307211" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="lDt-8p-2Lr"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,17 +75,12 @@
                         <constraints>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="centerX" secondItem="zyP-Q5-u0n" secondAttribute="centerX" id="0eH-jx-9bK"/>
                             <constraint firstItem="jAh-5V-jqP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4AN-8P-6fd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TAY-Qn-x7u" secondAttribute="bottom" constant="141" id="8P8-zH-p7F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAY-Qn-x7u" secondAttribute="trailing" id="Agf-1f-krI"/>
-                            <constraint firstItem="TAY-Qn-x7u" firstAttribute="leading" secondItem="pkf-r7-FAV" secondAttribute="trailing" constant="39" id="EEV-Kl-MCl"/>
-                            <constraint firstItem="TAY-Qn-x7u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="HwU-gN-nu7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9eO-9Z-Vg1" secondAttribute="trailing" id="DBR-mu-e1I"/>
+                            <constraint firstItem="9eO-9Z-Vg1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="Iae-ej-G5F"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LvA-nt-dqk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zyP-Q5-u0n" secondAttribute="bottom" id="Voh-hb-D6O"/>
-                            <constraint firstAttribute="trailing" secondItem="TAY-Qn-x7u" secondAttribute="leading" id="W7A-Kb-z0Y"/>
-                            <constraint firstItem="lPU-1K-Xph" firstAttribute="top" secondItem="9eO-9Z-Vg1" secondAttribute="top" id="YjF-Hz-Eeo"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="top" secondItem="vOB-VG-NuW" secondAttribute="bottom" constant="25" id="a8e-0E-Ryl"/>
                             <constraint firstItem="vN5-yH-40r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="boo-Ws-XRW"/>
-                            <constraint firstItem="lPU-1K-Xph" firstAttribute="centerX" secondItem="sEc-s3-kJU" secondAttribute="centerX" id="cdJ-7z-znt"/>
                             <constraint firstAttribute="bottom" secondItem="zyP-Q5-u0n" secondAttribute="top" id="ceJ-gz-9e9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vOB-VG-NuW" secondAttribute="trailing" constant="71" id="dUw-uF-X1X"/>
                             <constraint firstItem="vOB-VG-NuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="ddU-po-JeT"/>
@@ -108,6 +90,8 @@
                             <constraint firstAttribute="bottom" secondItem="jAh-5V-jqP" secondAttribute="bottom" id="iYp-3Y-jSf"/>
                             <constraint firstItem="vN5-yH-40r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lbj-Cq-dr8"/>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="277" id="pKh-4I-zdL"/>
+                            <constraint firstAttribute="trailing" secondItem="9eO-9Z-Vg1" secondAttribute="leading" id="rW3-mw-KSZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9eO-9Z-Vg1" secondAttribute="bottom" constant="179" id="sMu-QA-j8P"/>
                             <constraint firstItem="jAh-5V-jqP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ukd-we-5QQ"/>
                             <constraint firstItem="pkf-r7-FAV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="x7j-BJ-zOT"/>
                             <constraint firstItem="zyP-Q5-u0n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ys5-AW-Svf"/>
@@ -115,11 +99,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="lPU-1K-Xph"/>
                                 <exclude reference="jAh-5V-jqP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="W7A-Kb-z0Y"/>
+                                <exclude reference="rW3-mw-KSZ"/>
                                 <exclude reference="ceJ-gz-9e9"/>
                             </mask>
                         </variation>
@@ -128,19 +111,41 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="bottomAnimator" destination="srR-GX-rhz" id="zq6-PK-PsR"/>
                         <outlet property="bottomView" destination="zyP-Q5-u0n" id="rOP-bp-wPK"/>
-                        <outlet property="bottomViewAnimationConstraint" destination="ceJ-gz-9e9" id="RHb-8b-Edi"/>
-                        <outlet property="bottomViewDefaultConstraint" destination="Voh-hb-D6O" id="YzL-dp-qEe"/>
+                        <outlet property="centerAnimator" destination="3IT-HV-dks" id="mba-qA-3wM"/>
                         <outlet property="centerView" destination="sEc-s3-kJU" id="elD-ER-oW7"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="zDb-Ie-uS6"/>
+                        <outlet property="rightAnimator" destination="apO-pB-TG5" id="5dm-iQ-OmD"/>
                         <outlet property="shadowView" destination="jAh-5V-jqP" id="Tb4-A8-hqj"/>
-                        <outlet property="sideView" destination="9eO-9Z-Vg1" id="a7w-8I-iI1"/>
-                        <outlet property="sideViewAnimationConstraint" destination="W7A-Kb-z0Y" id="4Yp-b0-9Kf"/>
-                        <outlet property="sideViewDefaultConstraint" destination="Agf-1f-krI" id="OnH-m9-xBL"/>
+                        <outlet property="sideView" destination="9eO-9Z-Vg1" id="h26-3w-BLy"/>
+                        <outlet property="topAnimator" destination="LN9-No-cQP" id="Nud-39-ObC"/>
                         <outlet property="topView" destination="vN5-yH-40r" id="YMu-ba-PgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="srR-GX-rhz" customClass="ConstraintAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
+                    <connections>
+                        <outlet property="activeConstraint" destination="Voh-hb-D6O" id="iK5-5K-9dk"/>
+                        <outlet property="inactiveConstraint" destination="ceJ-gz-9e9" id="mSb-ad-tmm"/>
+                    </connections>
+                </customObject>
+                <customObject id="apO-pB-TG5" customClass="ConstraintAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
+                    <connections>
+                        <outlet property="activeConstraint" destination="DBR-mu-e1I" id="tQS-nY-AQI"/>
+                        <outlet property="inactiveConstraint" destination="rW3-mw-KSZ" id="ozl-Sx-7yV"/>
+                    </connections>
+                </customObject>
+                <customObject id="3IT-HV-dks" customClass="AlphaAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="fadingVeiws" destination="sEc-s3-kJU" collectionClass="NSMutableArray" id="Tq5-30-NBC"/>
+                    </connections>
+                </customObject>
+                <customObject id="LN9-No-cQP" customClass="AlphaAnimatorProxy" customModule="Custom_Animation" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="fadingVeiws" destination="vN5-yH-40r" collectionClass="NSMutableArray" id="LkU-VV-WAv"/>
+                    </connections>
+                </customObject>
                 <tapGestureRecognizer id="Gl5-eS-5zY">
                     <connections>
                         <action selector="viewTapAction:" destination="BYZ-38-t0r" id="4bc-in-ekE"/>

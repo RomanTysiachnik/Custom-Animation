@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		063304501FFBE8990011055D /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0633044F1FFBE8990011055D /* Animations.swift */; };
 		0670409E1FFBD5BD00AE0A15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670409D1FFBD5BD00AE0A15 /* AppDelegate.swift */; };
 		067040A01FFBD5BD00AE0A15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670409F1FFBD5BD00AE0A15 /* ViewController.swift */; };
 		067040A31FFBD5BD00AE0A15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067040A11FFBD5BD00AE0A15 /* Main.storyboard */; };
 		067040A51FFBD5BD00AE0A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067040A41FFBD5BD00AE0A15 /* Assets.xcassets */; };
 		067040A81FFBD5BD00AE0A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067040A61FFBD5BD00AE0A15 /* LaunchScreen.storyboard */; };
 		067040B01FFBD9C200AE0A15 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067040AF1FFBD9C200AE0A15 /* Model.swift */; };
+		0672C6BF1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6BE1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift */; };
+		0672C6C11FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6C01FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift */; };
+		0672C6C41FFE4DBA001E6CC3 /* AnimatorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672C6C31FFE4DBA001E6CC3 /* AnimatorGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0633044F1FFBE8990011055D /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0670409A1FFBD5BD00AE0A15 /* Custom Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0670409D1FFBD5BD00AE0A15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0670409F1FFBD5BD00AE0A15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +27,9 @@
 		067040A71FFBD5BD00AE0A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		067040A91FFBD5BD00AE0A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		067040AF1FFBD9C200AE0A15 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0672C6BE1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantAnimatorProxy.swift; sourceTree = "<group>"; };
+		0672C6C01FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaAnimatorProxy.swift; sourceTree = "<group>"; };
+		0672C6C31FFE4DBA001E6CC3 /* AnimatorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				067040B51FFBDEA900AE0A15 /* View */,
+				0672C6C21FFE4D9F001E6CC3 /* Animation */,
 				0633044E1FFBE39C0011055D /* Controller */,
 				067040B41FFBDEA100AE0A15 /* Model */,
 				067040B61FFBDEB200AE0A15 /* Support */,
@@ -78,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				067040AF1FFBD9C200AE0A15 /* Model.swift */,
-				0633044F1FFBE8990011055D /* Animations.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -100,6 +104,16 @@
 				067040A91FFBD5BD00AE0A15 /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		0672C6C21FFE4D9F001E6CC3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0672C6C01FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift */,
+				0672C6BE1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift */,
+				0672C6C31FFE4DBA001E6CC3 /* AnimatorGroup.swift */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				067040B01FFBD9C200AE0A15 /* Model.swift in Sources */,
+				0672C6BF1FFE451E001E6CC3 /* ConstantAnimatorProxy.swift in Sources */,
 				067040A01FFBD5BD00AE0A15 /* ViewController.swift in Sources */,
-				063304501FFBE8990011055D /* Animations.swift in Sources */,
 				0670409E1FFBD5BD00AE0A15 /* AppDelegate.swift in Sources */,
+				0672C6C41FFE4DBA001E6CC3 /* AnimatorGroup.swift in Sources */,
+				0672C6C11FFE49DB001E6CC3 /* AlphaAnimatorProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
