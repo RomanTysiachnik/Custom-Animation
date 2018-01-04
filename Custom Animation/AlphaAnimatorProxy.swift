@@ -2,7 +2,7 @@
 
 import UIKit
 
-class AlphaAnimatorProxy: NSObject {
+class AlphaAnimatorProxy: NSObject, Animators {
     
     @IBOutlet var fadingVeiw: UIView!
     

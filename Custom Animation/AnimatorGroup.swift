@@ -2,18 +2,16 @@
 
 import UIKit
 
+protocol Animators {
+    func activate(if expression: Bool)
+}
+
 class AnimatorGroup {
-    var constraintAnimators: [ConstraintAnimatorProxy]!
-    var alphaAnimator: [AlphaAnimatorProxy]!
+    var animators: [Animators]!
     
-    func performAnimation() {
-        for animator in constraintAnimators {
-            animator.activate(if: true)
-        }
-        for animator in alphaAnimator {
-            animator.activate(if: true)
+    func performAnimation(for props: UIProps) {
+        for animator in animators {
+            //animator.activate(for: props)
         }
     }
-    
-    
 }

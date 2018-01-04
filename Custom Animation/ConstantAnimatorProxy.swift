@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ConstraintAnimatorProxy: NSObject {
+class ConstraintAnimatorProxy: NSObject, Animators {
     
     @IBOutlet var activeConstraint: NSLayoutConstraint!
     @IBOutlet var inactiveConstraint: NSLayoutConstraint!
@@ -10,5 +10,9 @@ class ConstraintAnimatorProxy: NSObject {
     func activate(if expression: Bool) {
         inactiveConstraint.isActive = expression
         activeConstraint.isActive = !expression
+    }
+    func activate(for props: UIProps) {
+//        inactiveConstraint.isActive
+//        activeConstraint.isActive
     }
 }

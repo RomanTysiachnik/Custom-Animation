@@ -71,7 +71,8 @@ class ViewController: UIViewController {
                         self.rightAnimator.activate(if: self.props.sideView.isHidden)
                         self.bottomAnimator.activate(if: self.props.bottomView.isHidden)
                         self.topAnimator.activate(if: self.props.topView.isHidden)
-                        self.centerAnimator.activate(if: self.props.centerView.isHidden)
+                        //self.centerAnimator.activate(if: self.props.centerView.isHidden)
+                        self.centerView.isHidden = true
                         self.view.layoutIfNeeded()
         },
                        completion: nil)
